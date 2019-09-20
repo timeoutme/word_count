@@ -10,4 +10,7 @@ def count(request):
     content = request.GET['text']   #获取提交文本
     frequency = dict(Counter(content))
     frequency = sorted(frequency.items(),key=lambda x:x[1],reverse=True)
-    return render(request,'count.html',{'counts':counts,'content':content,'frequecy':frequency})    
+    return render(request,'count.html',{'counts':counts,'content':content,'frequecy':frequency})
+
+def about(request):
+    return render(request,'about.html')
